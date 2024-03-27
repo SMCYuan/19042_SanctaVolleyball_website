@@ -118,3 +118,19 @@
         </div>
     </section>
 
+    <!-- JavaScript for fading effect -->
+    <script>
+        window.onload = function() {
+            var banner = document.getElementById('welcomeBanner');
+            setTimeout(function() {
+                banner.style.opacity = '0';
+                setTimeout(function() {
+                    banner.style.display = 'none';
+                }, 2000); // Fading duration
+            }, 3000); // Time before fading starts (in milliseconds)
+        };
+    </script>
+</body>
+</html>
+{% endblock %}
+    
