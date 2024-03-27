@@ -1,0 +1,56 @@
+{% extends "template.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Banner</title>
+    <!-- Add your CSS links here if needed -->
+    <style>
+        /* CSS for the fading welcome banner */
+        .welcome-banner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* Adjust length as needed */
+            max-width: 400px; /* Adjust maximum width as needed */
+            height: auto;
+            background-color: #cce5ff; /* Light blue color */
+            color: #004085; /* Text color */
+            text-align: center;
+            font-size: 18px; /* Adjust font size as needed */
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+            border-radius: 20px; /* Rounded corners */
+            padding: 20px;
+        }
+
+        /* CSS for signup input box */
+        .signup-input {
+            width: calc(100% - 80px); /* Adjust width as needed */
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #004085; /* Border color */
+            border-radius: 20px; /* Rounded corners */
+            font-size: 16px;
+            float: left;
+        }
+
+        /* CSS for signup button */
+        .signup-button {
+            width: 70px;
+            height: 40px;
+            margin-left: 10px;
+            background-color: #007bff; /* Blue color */
+            color: #fff;
+            border: none;
+            border-radius: 20px; /* Rounded corners */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+        }
