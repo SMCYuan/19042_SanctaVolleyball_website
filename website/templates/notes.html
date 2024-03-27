@@ -1,0 +1,16 @@
+{% extends "template.html"  %}
+{% block title %} Home {% endblock  %}
+{% block content %}
+<h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <div class="card border-dark">
+        <div class="card-header bgcolour d-flex justify-content-between align-items-center">
+        <div class="card-text">{{note.data}}</div>
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+    </div> 
+    <br/>
+    {% endfor %}
