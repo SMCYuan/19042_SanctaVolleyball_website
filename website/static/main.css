@@ -1,0 +1,25 @@
+.bgcolour{
+    background-color: lightblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+/* CSS for the fading welcome banner */
+.welcome-banner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust length as needed */
+    max-width: 400px; /* Adjust maximum width as needed */
+    height: auto;
+    background-color: #cce5ff; /* Light blue color */
+    color: #004085; /* Text color */
+    text-align: center;
+    font-size: 18px; /* Adjust font size as needed */
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px;
+}
