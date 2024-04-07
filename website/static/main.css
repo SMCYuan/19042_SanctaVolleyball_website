@@ -1,7 +1,7 @@
-.bgcolour{
+/* CSS for background color and font family */
+.bgcolour {
     background-color: lightblue;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* CSS for the fading welcome banner */
