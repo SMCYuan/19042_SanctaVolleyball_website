@@ -54,3 +54,12 @@
     text-decoration: none; /* Remove underline */
     cursor: pointer;
 }
+.signup-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.text-container {
+    background-color: #cce5ff;
+    padding: 20px;
+    border-radius: 10px;
+}
