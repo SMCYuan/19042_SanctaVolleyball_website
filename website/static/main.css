@@ -1,7 +1,65 @@
-/* CSS for background color and font family */
+/* Import Bootstrap */
+@import "bootstrap/scss/bootstrap.scss";
+
+/* Resets for body and html height for sticky footer */
+body,
+html {
+    height: 100%;
+}
+
+/* Custom SCSS for feature component with Bootstrap icon */
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+}
+
+/* Background image for featured blog post */
+.bg-featured-blog {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 15rem;
+}
+
+/* Revised CSS for background color and font family */
 .bgcolour {
     background-color: lightblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* CSS for flexible container sizes */
+.container {
+    max-width: 1300px; /* Maximum width of the container */
+    margin: 0 auto; /* Center align the container */
+}
+
+/* CSS for flexible section sizes */
+section {
+    padding: 50px 0; /* Padding for sections */
+}
+
+/* CSS for flexible column sizes */
+.col-lg-6 {
+    flex-basis: calc(50% - 30px); /* Adjust column width as needed */
+    margin-right: 30px; /* Adjust margin between columns */
+}
+
+/* CSS for flexible text container sizes */
+.text-container {
+    max-width: 600px; /* Maximum width of the text container */
+    margin: 0 auto; /* Center align the text container */
+}
+
+/* CSS for flexible image sizes */
+.fish-eye img {
+    max-width: 100%; /* Maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* CSS for the fading welcome banner */
@@ -22,7 +80,9 @@
     transition: opacity 1s ease-in-out;
     border-radius: 20px; /* Rounded corners */
     padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
+
 .close-btn {
     position: absolute;
     top: 10px;
@@ -36,30 +96,34 @@
     justify-content: center;
     align-items: center;
     color: #fff;
+    transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
 }
 
 .close-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+/* Revised CSS for the signup button */
 .signup-button {
     display: inline-block;
-    width: auto; /* Set width to auto to fit the text */
-    padding: 10px 20px; /* Add padding to make the button more clickable */
-    margin-top: 20px; /* Add margin to separate it from the paragraph */
-    background-color: #007bff; /* Blue color */
+    padding: 10px 20px;
+    background-color: #0056b3; /* Darker blue */
     color: #fff;
     border: none;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px;
     font-size: 16px;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     cursor: pointer;
-}
-.signup-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
 }
 
+.signup-button:hover {
+    background-color: #004080; /* Darker blue on hover */
+}
+
+/* Keep other styles unchanged */
 .text-container {
-    background-color: #cce5ff;
+    background-color: #62aaf7;
     padding: 20px;
     border-radius: 10px;
 }
@@ -72,29 +136,27 @@
 .fish-eye img {
     width: 100%;
     height: auto;
-    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Add box-shadow transition */
-    transform-style: preserve-3d; /* Ensure 3D transformations */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
 }
 
 .fish-eye img:hover {
     transform: rotateY(15deg) scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Add dynamic shadow */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Added styles for containers */
 .fish-eye-text .container {
-    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Add box-shadow transition */
-    transform-style: preserve-3d; /* Ensure 3D transformations */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Enhanced and darker passive shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .fish-eye-text .container:hover {
-    transform: rotateY(5deg) scale(1.02); /* Slightly rotate and scale on hover */
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6); /* Darker and more prominent dynamic shadow on hover */
+    transform: rotateY(5deg) scale(1.02);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Added styles for text */
 .fish-eye-text .container:hover h2,
 .fish-eye-text .container:hover p {
-    transform: translateY(-5px); /* Move text upward slightly on hover */
+    transform: translateY(-5px);
 }
