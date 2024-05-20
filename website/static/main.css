@@ -160,3 +160,8 @@ section {
 .fish-eye-text .container:hover p {
     transform: translateY(-5px);
 }
+
+.smaller-image {
+    width: 50px; /* Adjust the width to your desired size */
+    height: 50px; /* Adjust the height to your desired size */
+}
