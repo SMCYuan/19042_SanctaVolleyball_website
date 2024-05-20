@@ -4,7 +4,7 @@
 {% block content %}
     <h3 align="center">Sign Up</h3>
 
-    <form id="signupForm" onsubmit="return validateSignUp()">
+    <form method="POST">
         <div class="form-group">
             <label for="email">Email Address</label>
             <input
@@ -13,7 +13,6 @@
                 id="email"
                 name="email"
                 placeholder="Enter Email"
-                required
             />
         </div>
 
@@ -25,7 +24,6 @@
                 id="firstName"
                 name="firstName"
                 placeholder="Enter First Name"
-                required
             />
         </div>
 
@@ -37,7 +35,6 @@
                 id="password1"
                 name="password1"
                 placeholder="Enter Password"
-                required
             />
         </div>
 
@@ -49,36 +46,9 @@
                 id="password2"
                 name="password2"
                 placeholder="Confirm Password"
-                required
             />
         </div>
 
         <button type="submit" class="btn btn-primary">Sign up</button>
     </form>
-
-    <script>
-        function validateSignUp() {
-            var email = document.getElementById('email').value;
-            var firstName = document.getElementById('firstName').value;
-            var password1 = document.getElementById('password1').value;
-            var password2 = document.getElementById('password2').value;
-
-            // Simple email validation
-            if (!email || !email.includes('@')) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            // Check if passwords match
-            if (password1 !== password2) {
-                alert('Passwords do not match. Please try again.');
-                return false;
-            }
-
-            // Perform additional validation if needed
-
-            // If all validations pass, the form will be submitted
-            return true;
-        }
-    </script>
 {% endblock %}
